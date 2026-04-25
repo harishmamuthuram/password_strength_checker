@@ -1,24 +1,29 @@
 # Password Strength Checker
 
-A beginner-friendly Python program to check the strength of a password.  
+A Python program that evaluates password strength using pattern 
+checking and a common password blocklist.
 
-## Features
-- Checks if the password is in a list of **common passwords**.
-- Ensures the password meets security requirements:
-  - At least **8 characters long**
-  - Contains at least **one uppercase letter**
-  - Contains at least **one lowercase letter**
-  - Contains at least **one number**
-  - Contains at least **one special character** (`! @ # $ % ^ & * ? > <`)
-- Provides a **password strength score** (0–5) and classification:
-  - Weak (0–2)
-  - Medium (3–4)
-  - Strong (5)
+## What it does
+Checks a password against security requirements and a list of commonly 
+used passwords, then returns a strength score and classification.
 
-## How to use
-1. Clone this repository.
-2. Make sure there is a `common_passwords.txt` file in the same folder. This file should contain commonly used passwords, one per line.
-3. Run the script:
+Requirements checked:
+- Minimum 8 characters
+- At least one uppercase letter
+- At least one lowercase letter
+- At least one number
+- At least one special character (!@#$%^&*?><)
 
-```bash
-python password_checker.py
+Strength scoring:
+- Weak: 0–2
+- Medium: 3–4
+- Strong: 5
+
+## How to run
+1. Clone the repo
+2. Make sure common_passwords.txt is in the same folder
+3. Run: python password_checker.py
+
+## What I learned
+Built this as a first step into understanding how password validation 
+works and why common password blocklists matter in real authentication systems.
