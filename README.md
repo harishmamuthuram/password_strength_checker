@@ -1,29 +1,48 @@
-# Password Strength Checker
+# password-strength-checker
 
-A Python program that evaluates password strength using pattern 
-checking and a common password blocklist.
+A Python tool that evaluates password strength using pattern checking and a common password blocklist — returns a score and classification.
 
-## What it does
-Checks a password against security requirements and a list of commonly 
-used passwords, then returns a strength score and classification.
+![Python](https://img.shields.io/badge/Python-3.x-blue) ![Type](https://img.shields.io/badge/tool-password--validation-green)
 
-Requirements checked:
-- Minimum 8 characters
-- At least one uppercase letter
-- At least one lowercase letter
-- At least one number
-- At least one special character (!@#$%^&*?><)
+---
 
-Strength scoring:
-- Weak: 0–2
-- Medium: 3–4
-- Strong: 5
+## Features
+- Checks against 5 security requirements
+- Cross-references a `common_passwords.txt` blocklist
+- Returns a score (0–5) and a Weak / Medium / Strong classification
 
-## How to run
-1. Clone the repo
-2. Make sure common_passwords.txt is in the same folder
-3. Run: python password_checker.py
+---
 
-## What I learned
-Built this as a first step into understanding how password validation 
-works and why common password blocklists matter in real authentication systems.
+## Requirements checked
+
+| Rule | Requirement |
+|------|------------|
+| Length | Minimum 8 characters |
+| Uppercase | At least one A–Z |
+| Lowercase | At least one a–z |
+| Number | At least one 0–9 |
+| Special char | At least one of `!@#$%^&*?><` |
+
+---
+
+## Scoring
+
+- **Weak** — 0 to 2 requirements met
+- **Medium** — 3 to 4 requirements met
+- **Strong** — all 5 requirements met
+
+---
+
+## Usage
+
+```bash
+password_checker.py
+```
+
+Make sure `common_passwords.txt` is in the same folder before running.
+
+---
+
+## Built as part of
+
+Built to understand why password validation and common password blocklists matter in real authentication systems.
